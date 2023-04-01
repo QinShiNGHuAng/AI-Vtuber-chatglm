@@ -15,8 +15,8 @@ print("ChatGLM-6B：                https://github.com/THUDM/ChatGLM-6B")
 print("注意你需要至少6G以上的N卡，另外，我没有也不打算弄粉丝群 by 领航员未鸟")
 print("=====================================================================\n")
 
-tokenizer = AutoTokenizer.from_pretrained("./chatglm-6b-int4-qe", trust_remote_code=True)  # 导入chatglm
-model = AutoModel.from_pretrained("./chatglm-6b-int4-qe", trust_remote_code=True).half().cuda()
+tokenizer = AutoTokenizer.from_pretrained("./chatglm-6b-int4", trust_remote_code=True)  # 导入chatglm
+model = AutoModel.from_pretrained("./chatglm-6b-int4", trust_remote_code=True).half().cuda()
 #  model = model.eval()  # 如果需要模型继续训练请注释掉这一行
 
 QuestionList = queue.Queue(10)  # 定义问题 用户名 回复 播放列表 四个先进先出队列
